@@ -6,16 +6,17 @@ original firmware taken from NEON AIRSHIP: https://www.youtube.com/watch?v=HJnje
 
 
 /* HW PINOUT DEFINES */
-#define BUTTON_PIN   22     // Digital IO pin connected to the button.  This will be
-// driven with a pull-up resistor so the switch should
-// pull the pin to ground momentarily.  
+#define BUTTON_PIN          22    // Digital IO pin connected to the button.  This will be
+                                  // driven with a pull-up resistor so the switch should
+                                  // pull the pin to ground momentarily.
+
 #define TOGGLE_ONOFF_PIN    13    //toggle to enable or disabled the entire loop
-#define PIXEL_PIN     27    // Digital IO pin connected to the NeoPixels.
-#define PIXEL_COUNT   16    // Number of leds on the strip
+#define PIXEL_PIN           27    // Digital IO pin connected to the NeoPixels.
+#define PIXEL_COUNT         16    // Number of leds on the strip
 
 /* PROGRAM DEFINES*/
-#define MAX_STATE       9
-#define MIN_STATE       1
+#define MAX_STATE             9
+#define MIN_STATE             1
 #define DEBOUNCE_TIME_BUTTON  350 //in ms
 #define DEBOUNCE_TIME_TOGGLE  100 //in ms
 
@@ -31,7 +32,7 @@ unsigned long last_button_time = 0;
 unsigned long toggle_time = 0;  
 unsigned long last_toggle_time = 0; 
 int toggleState = 0;         // variable for reading the pushbutton status
-bool toggle_pressed = false;
+bool g_toggle_pressed = false;
 bool g_loop_animation = true;
 bool light_locked = false;
 
@@ -71,7 +72,7 @@ void IRAM_ATTR isr_toggle_on_off() {
   if (toggle_time - last_toggle_time > DEBOUNCE_TIME_TOGGLE)
   {
     toggleState = digitalRead(TOGGLE_ONOFF_PIN);
-    toggle_pressed = true; 
+    g_toggle_pressed = true; 
     g_loop_animation = false;
     Serial.printf("Toggle switched %d\n", (toggleState == LOW ? 1 : 0) );
     // if(toggleState == HIGH) ---> IT BREAKES EVERYTHING
@@ -103,14 +104,14 @@ void setup() {
   strip.show(); // Initialize all pixels to 'off'
 
   toggleState = digitalRead(TOGGLE_ONOFF_PIN); //initial status
-  toggle_pressed = true;
+  g_toggle_pressed = true;
 }
 
 void loop()
 {
-    if(toggle_pressed) 
+    if(g_toggle_pressed) 
     {
-      toggle_pressed = false;
+      g_toggle_pressed = false;
       if(toggleState == HIGH) 
       {
         Serial.println("Toggle OFF");
@@ -144,7 +145,7 @@ void loop()
 
 bool checkGlobalPressed(void)
 {
-  return (!button1.pressed || !toggle_pressed);
+  return (!button1.pressed || !g_toggle_pressed);
 }
 
 
@@ -192,7 +193,7 @@ void colorWipe(uint32_t c, uint8_t wait) {
     strip.setPixelColor(i, c);
     strip.show();
     delayClever(5);
-    if (button1.pressed || toggle_pressed) break;
+    if (button1.pressed || g_toggle_pressed) break;
   }
 }
 
@@ -205,7 +206,7 @@ void rainbow(uint32_t wait) {
     }
     strip.show();
     delayClever(wait);
-    if (button1.pressed || toggle_pressed) break;
+    if (button1.pressed || g_toggle_pressed) break;
   }
 }
 
@@ -224,7 +225,7 @@ void rainbowCycle(uint32_t wait) {
       }
       strip.show();
       delayClever(wait);
-      if (button1.pressed || toggle_pressed) break;
+      if (button1.pressed || g_toggle_pressed) break;
     }
   }
 }
@@ -245,7 +246,7 @@ void theaterChase(uint32_t c, uint32_t wait) {
         strip.show();
   
         delayClever(wait);
-        if (button1.pressed || toggle_pressed) break;
+        if (button1.pressed || g_toggle_pressed) break;
   
         for (int i = 0; i < strip.numPixels(); i = i + 3) 
         {
@@ -273,14 +274,14 @@ void theaterChaseRainbow(uint32_t wait) {
         strip.show();
   
         delayClever(wait);
-        if (button1.pressed || toggle_pressed) break;
+        if (button1.pressed || g_toggle_pressed) break;
   
         for (int i = 0; i < strip.numPixels(); i = i + 3) 
         {
           strip.setPixelColor(i + q, 0);      //turn every third pixel off
         }
       }
-      if (button1.pressed || toggle_pressed) break;
+      if (button1.pressed || g_toggle_pressed) break;
     }
   }
 }
