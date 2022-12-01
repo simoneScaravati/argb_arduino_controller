@@ -5,10 +5,13 @@
 <h1 align="center">Arduino A-RGB DIY Controller (Artic Freeze A35)</h1>
 
   <p align="center">
-    DIY A-RGB Controller for Arduino - Specific use case Artic Freeze A35 +ESP32 
+    <h2>DIY A-RGB Controller for Arduino - Specific use case Artic Freeze A35 +ESP32 --> you can actually control ANY KIND of ARGB strips with ANY common microcotroller. </h2>
+    <br /> Inspired by NEON AIRSHIP <a href="https://www.youtube.com/watch?v=HJnjesdXlAA">video project</a>!
+    <br />
+    All images are taken from the internet and i don't own any copyrights of them, especially for Artic products.
     <br />
     <!-- <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a> -->
-    <a href="https://github.com/simoneScaravati/argb_arduino_controller/blob/main/resources/live_demo.mp4">View Demo</a>
+    <a href="https://github.com/simoneScaravati/argb_arduino_controller/blob/main/resources/live_demo.gif">View Demo</a>
     ·
     <a href="https://github.com/simoneScaravati/argb_arduino_controller/issues">Report Bug</a>
     ·
@@ -47,22 +50,21 @@
 -->
 
 
-![BOX](https://github.com/peekpt/MicroSolderingStation/raw/master/media/DSCF9575.JPG)
+![BOX](https://github.com/simoneScaravati/argb_arduino_controller/blob/main/resources/live_demo.gif)
 
-![BOX](https://github.com/peekpt/MicroSolderingStation/raw/master/media/box.png)
-
-## Youtube
-
-[![YOUTUBE overview](https://img.youtube.com/vi/iJwf-qWp4lI/0.jpg)](https://www.youtube.com/watch?v=iJwf-qWp4lI)
+![BOX](https://github.com/simoneScaravati/argb_arduino_controller/blob/main/resources/cables_management.jpg)
 
 
-[![YOUTUBE performance](https://img.youtube.com/vi/kRIv3psVogc/0.jpg)](https://www.youtube.com/watch?v=kRIv3psVogc)
+## "Schematic"
+
+![Schematic](https://github.com/simoneScaravati/argb_arduino_controller/blob/main/Scheme_argb_articFreeezeA35_esp32.png)
+
+### Original project Youtube
+
+[![YOUTUBE overview](https://www.youtube.com/watch?v=HJnjesdXlAA)
 
 
-
-
-
-## Features
+## Features & Sources
 
 - Cheap & easy build under 10$
 - Temperature controled (PID)
@@ -79,23 +81,13 @@
 
 ## Materials
 
-- 1x Arduino Uno
-- 1x Nokia LCD Module
-- 1x USB Soldering Iron
-- 1x Thermistor 100k 3950
-- 1x 4 wire wire cable(usb cable works)
-- 1x 5mm Led
-- 2x 1k resistor
-- 1x 4,7k resitor
-- 1x 10n Capacitor
-- Kapton tape 10-20mm
-- 1x N MosFet (or use the Iron's pcb one)
-- 1x rocker switch
-- 10 x small screws 2.5x5mm large head
+- 1x ESP32 TTGO OLEDv1
+- 1x Artic A-RGB Freeze A35
+- 1x button
+- 1x toggle switch
+- 1x (optional) 3d printed case :)
 
-## Schematic
 
-![Schematic](https://github.com/simoneScaravati/argb_arduino_controller/blob/main/Scheme_argb_articFreeezeA35_esp32.png)
 
 
 
@@ -116,6 +108,7 @@
 
 -->
 
+<!--
 ## Parts & Modules ##
 
 100k thermistor (3950):
@@ -153,7 +146,7 @@ Switch:
 
 
 
-
+-->
 
 
 
