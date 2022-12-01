@@ -1,29 +1,25 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
-<h3 align="center">project_title</h3>
+<h1 align="center">Arduino A-RGB DIY Controller (Artic Freeze A35)</h1>
 
   <p align="center">
-    project_description
+    DIY A-RGB Controller for Arduino - Specific use case Artic Freeze A35 +ESP32 
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <!-- <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a> -->
+    <a href="https://github.com/simoneScaravati/argb_arduino_controller/blob/main/resources/live_demo.mp4">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/simoneScaravati/argb_arduino_controller/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/simoneScaravati/argb_arduino_controller/issues">Request Feature</a>
   </p>
 </div>
 
 
 
 <!-- TABLE OF CONTENTS -->
+<!--
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -41,28 +37,14 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#Schematic">Schematic</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-
-
-
-
-_Transform a cheap USB soldering iron in a powerfull Active tip Soldering Station._
-
-
-**With almost no thermal capacity this station regulates the tip's temperature instantaneously. Solder larger thermal mass with ease, it's magic.**
-
-_fiy: Active Soldering irons cost a lot of money_
-
-
-
-*The cheapest Micro soldering Station ever:*
+-->
 
 
 ![BOX](https://github.com/peekpt/MicroSolderingStation/raw/master/media/DSCF9575.JPG)
@@ -113,56 +95,13 @@ _fiy: Active Soldering irons cost a lot of money_
 
 ## Schematic
 
-![Schematic](https://raw.githubusercontent.com/peekpt/MicroSolderingStation/master/media/schematic.png)
+![Schematic](https://github.com/simoneScaravati/argb_arduino_controller/blob/main/Scheme_argb_articFreeezeA35_esp32.png)
 
 
 
-## Soldering Tip Diagram
-![Diagram](https://github.com/peekpt/MicroSolderingStation/raw/master/media/soldering%20tip.png)
-
-## UNO R3 CH340 Power Hack
-![BOX](https://github.com/peekpt/MicroSolderingStation/raw/master/media/UNO%20CH340%20hack.jpg)
-
-_Cut Power the trace underneath the PCB and connect a rocker switch in series._
-
-## Fritzing
-![Fritzing](https://github.com/peekpt/MicroSolderingStation/raw/master/media/fritzing_bb.png)
-
-Remove the pcb from the soldering iron and grab a cable with 4 wires (2 for thermistor, 2 for the heater).
-Poke an hole in the side of the iron's case, near the yellow nut, to pass the 2 wires and solder them to the thermistor.
-Use kapton tape to isolate the thermistor pins and to fix the thermistor's glass tip to the iron end with some kapton turns.
-The other 2 wires connect to the heater and the led with a resistor in series. (watch the polarity of the led)
-Remove the ball bearing and connect the led in the hole, break the spring post from the other side of the case.
 
 
-## User Interface Screenshots
-![UNO](https://github.com/peekpt/MicroSolderingStation/raw/master/media/interface_small.png)
-
-
-## Operation
-
-**main view**
-
-- \< >                   temp up down
-- [click]                cycle memories
-- [click & hold]         store mem mode
-- [double click]         settings mode
-
-**stand by mode**
-- [click]                  leave standby mode
-
-**store mem**
-- \< >                   select memory to store
-- [click]                store
-
-**settings mode submenus**
- - \< >                   navigate submenus
- - [click]                edit submenu
-
-**edit submenu**
-- \< >                   change value up down
-- [click]                exit submenu
-
+<!-- 
 ## ChangeLog
 
 2018-4-11
@@ -175,7 +114,7 @@ Remove the ball bearing and connect the led in the hole, break the spring post f
 - improved automatic pickup detection (must be more improved in the future)
 - you can now choose the type of wake up from standby between manual (by clicking) or automatic (by temperature) 
 
-
+-->
 
 ## Parts & Modules ##
 
