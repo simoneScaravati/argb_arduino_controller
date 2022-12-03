@@ -5,7 +5,7 @@
 <h1 align="center">Arduino A-RGB DIY Controller (Artic Freeze A35)</h1>
 
   <p align="center">
-    <h2>DIY A-RGB Controller for Arduino - Specific use case Artic Freeze A35 +ESP32 --> you can actually control ANY KIND of ARGB strips with ANY common microcotroller. </h2>
+    <h2>DIY A-RGB Controller for Arduino - Specific use case Artic Freeze A35 +ESP32 --> you can actually control ANY KIND of ARGB strips with ANY common microcontroller. </h2>
     <br /> Inspired by NEON AIRSHIP <a href="https://www.youtube.com/watch?v=HJnjesdXlAA">video project</a>!
     <br />
     All images are taken from the internet and i don't own any copyrights of them, especially for Artic products.
@@ -63,7 +63,7 @@
 
 [![YOUTUBE overview](https://www.youtube.com/watch?v=HJnjesdXlAA)
 
-
+<!-- 
 ## Features & Sources
 
 - Cheap & easy build under 10$
@@ -78,6 +78,12 @@
 - Firmware Updates
 - 3D Printed Case
 - Wake up from standby iron pickup detection (by temperature sensing)
+-->
+## Contents of repo
+- Arduino IDE project
+- Arduino IDE board setup image
+- Photos and video demo
+- STL file of 3d printed box I created
 
 ## Materials
 
